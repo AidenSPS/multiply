@@ -10,3 +10,7 @@ title.innerText = "Multiplication Practice";
 interface.appendChild(title);
 
 //Code to the questionBox
+var questionBox = document.createElement("p");
+questionBox.setAttribute('id','questionBoxP');
+questionBox.innerHTML = "Testing"; //x+" * "+y+" = ?" is the proper string, insert when done
+interface.appendChild(questionBox);
