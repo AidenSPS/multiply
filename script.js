@@ -12,7 +12,7 @@ interface.appendChild(title);
 //Code to the questionBox
 var questionBox = document.createElement("p");
 questionBox.setAttribute('id','questionBoxP');
-questionBox.innerHTML = askQuestion(); //x+" * "+y+" = ?" is the proper string, insert when done
+questionBox.innerText = askQuestion(); 
 interface.appendChild(questionBox);
 
 //Code for the inputBox
@@ -28,24 +28,20 @@ submitButton.innerText = "Submit";
 interface.appendChild(submitButton);
 
 
-//Globals needed for functions below
+//Globals needed for the functions below
 var x = 0;
 var y = 0;
 var product = 0;
 var min = 3;
 var max = 10;
 
-
-//Coding the code for the string
 function askQuestion(){
-	x = Math.floor(Math.random()*10)+3;
-	y = Math.floor(Math.random()*10)+3;
+	x = Math.floor(Math.random()*10)+1;
+	y = Math.floor(Math.random()*10)+1;
 	product = (x * y);
-	let question = x+" X "+y+" = ?";
+	let question = x+" X "+y+" = ?"
 	return question;
 }
-
-
 //Coding the correct or incorrect answer
 function checkAnswer(){
 	let userAnswer = document.getElementById("userAnswer");
