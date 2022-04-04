@@ -1,33 +1,35 @@
 //Coding the HTML to the userInterface
-var interface = document.createElement("div");
-interface.setAttribute("id","interface");
-document.body.appendChild(interface);
 
-//Code to the "Multiplication Title"
-var title = document.createElement("h1");
-title.setAttribute("id","multiplyTitle");
-title.innerText = "Multiplication Practice";
-interface.appendChild(title);
+function setupMultiply(){
+	let interface = document.createElement("div");
+	interface.setAttribute("id","interface");
+	document.body.appendChild(interface);
 
-//Code to the questionBox
-var questionBox = document.createElement("p");
-questionBox.setAttribute('id','questionBoxP');
-questionBox.innerText = askQuestion(); 
-interface.appendChild(questionBox);
+	//Code to the "Multiplication Title"
+	let title = document.createElement("h1");
+	title.setAttribute("id","multiplyTitle");
+	title.innerText = "Multiplication Practice";
+	interface.appendChild(title);
 
-//Code for the inputBox
-var userInput = document.createElement("input");
-userInput.setAttribute("id","userAnswer");
-interface.appendChild(userInput); //Center the inputBox
+	//Code to the questionBox
+	let questionBox = document.createElement("p");
+	questionBox.setAttribute('id','questionBoxP');
+	questionBox.innerText = askQuestion(); 
+	interface.appendChild(questionBox);
 
-//Code for the Submit Button 
-var submitButton = document.createElement("button");
-submitButton.setAttribute("id","submit");
-submitButton.setAttribute("onClick","checkAnswer()");
-submitButton.innerText = "Submit";
-interface.appendChild(submitButton);
+	//Code for the inputBox
+	let userInput = document.createElement("input");
+	userInput.setAttribute("id","userAnswer");
+	interface.appendChild(userInput); //Center the inputBox
 
+	//Code for the Submit Button 
+	let submitButton = document.createElement("button");
+	submitButton.setAttribute("id","submit");
+	submitButton.setAttribute("onClick","checkAnswer()");
+	submitButton.innerText = "Submit";
+	interface.appendChild(submitButton);
 
+}
 //Globals needed for the functions below
 var x = 0;
 var y = 0;
